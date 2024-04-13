@@ -23,7 +23,8 @@ class SecurityConfiguration(private val authenticationProvider: AuthenticationPr
     ): DefaultSecurityFilterChain = http.csrf { it.disable() }.authorizeHttpRequests {
         it.requestMatchers(
             "/auth/register",
-            "/auth/login"
+            "/auth/login",
+            "/users/exist"
         ).permitAll().anyRequest()
             .fullyAuthenticated()
     }.sessionManagement {

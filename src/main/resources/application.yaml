@@ -1,0 +1,24 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 2MB
+  profiles:
+    active: dev
+  application:
+    name: Articles api
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+
+jwt:
+  key: "VrVyloiWjdZxIIXcvzYrEU9p2BUJPJkj53ZB4oUGTzQllqmEcj2AUiUqiQvXqxQdDfki8tJ0vfMiW9DAvq5r6XLwXpUOfh5hgbysm6w1bgR7cXPjslm7vbsRIcV4OdActhE4sH3xrVBE2MZozcqeUGXfH0FKf3P8X7GDSRuIdQfUyl9IfkeX9KbxQv99Ae7mvgSAPOuvcr2th9vHxhuuJ5zX4hq5vawZ1AYXQ2rdlmlu4B998dRTheUMPWozL1HLHeOsRzXZfUsrL6IgBAlJQ6pvVXBAotEY2rTTJJpDuzut4AOj3RdLTEw2LKxgVDdqdTT70dRwc993HiXfXozBd3S21j2Zb1lIsRIdrHBA8Kr0Q0L6PKsSDP0a2SLGcI2FgIkQy81KQI4Zu15rjuRMQQZwgp1Hzb5qsYymj7F78BvVwIMFvfQO1FzqrzA26mOFZ49goFHqVyrf6U2rk5OXfvDibO5jswQfShaRrjBxzvkY5v2PLE9E9wStqEe7SZ1P"
+  access-token-expiration: 2629746000

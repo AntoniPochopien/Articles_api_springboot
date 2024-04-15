@@ -7,4 +7,6 @@ import org.springframework.data.repository.CrudRepository
 
 interface IArticleRepository : CrudRepository<Article, Int> {
     fun findAll(pageable: Pageable): Page<Article>
+
+    fun findByOwnerId(userId:String, pageable: Pageable): Page<Article>
 }
